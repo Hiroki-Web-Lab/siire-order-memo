@@ -1,0 +1,13 @@
+# --- devsession 共通（秘密・端末ローカル・生成物） ---
+node_modules/
+dist/
+.dev.vars
+.wrangler/
+.env
+.env.*
+!.env.example
+seed/prod-*.json
+seed/prod-*.sql
+.claude/settings.local.json
+*競合コピー*
+*conflicted copy*
