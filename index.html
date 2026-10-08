@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>仕入発注メモ | ブックマークレット</title>
+  <style>body{max-width:760px;margin:2rem auto;padding:0 1rem;font:16px/1.7 system-ui,sans-serif;color:#222}code,textarea{font-family:ui-monospace,monospace}textarea{width:100%;min-height:90px;box-sizing:border-box}a.button{display:inline-block;padding:.7rem 1rem;background:#1769aa;color:#fff;border-radius:6px;text-decoration:none}</style>
+</head>
+<body>
+  <h1>仕入発注メモ</h1>
+  <p>仕入一覧印刷ページの「土物」ブロックを読み取り、仕入先別の LINE 発注文を作るブックマークレットです。ページの内容を外部へ送信しません。</p>
+  <p><a class="button" id="bookmarklet" href="#">仕入発注メモ</a> をブックマークバーへドラッグして登録してください。</p>
+  <h2>ブックマークレットの URL</h2>
+  <p>手動で登録する場合は、下の文字列をコピーしてブックマークの URL 欄に貼り付けます。</p>
+  <textarea id="loader" readonly aria-label="ブックマークレット URL"></textarea>
+  <h2>Windows / Mac（Chrome・Edge・Safari）</h2>
+  <ol><li>ブラウザのブックマークバーを表示します。</li><li>上の「仕入発注メモ」リンクをブックマークバーへドラッグします。</li><li>仕入一覧印刷ページを開き、登録したブックマークを押します。</li></ol>
+  <h2>iOS Safari</h2>
+  <ol><li>任意のページを開いてブックマークに追加します。</li><li>ブックマークの編集画面を開き、名前を「仕入発注メモ」にします。</li><li>URL 欄の内容を消し、上の欄のローダー文字列を貼り付けて保存します。</li><li>仕入一覧印刷ページでそのブックマークを選びます。</li></ol>
+  <script>
+    const loader = "javascript:(function(){var s=document.createElement('script');s.src='https://hiroki-web-lab.github.io/siire-order-memo/siire-order-memo.js?t='+Date.now();document.body.appendChild(s)})();";
+    document.getElementById('bookmarklet').href = loader;
+    document.getElementById('loader').value = loader;
+  </script>
+</body>
+</html>

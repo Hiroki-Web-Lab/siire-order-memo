@@ -16,7 +16,7 @@
 
 ## 技術構成
 
-- ブックマークレット + GitHub Pages で配信する素の JavaScript（ビルドなし・依存なし）
+- ブックマークレット + GitHub Pages で配信する素の JavaScript（ビルドなし・依存なし）。配信元: `main` / リポジトリルート、URL: `https://hiroki-web-lab.github.io/siire-order-memo/`
   - ブックマークには「Pages 上の本体 JS を読み込む1行」だけを入れる。本体を直せば全端末に反映される
 - 対象端末: Windows / macOS（Edge・Chrome・Safari）、iOS Safari
 - 保存はブラウザの `localStorage`（端末ごと）。サーバー・DB は持たない
@@ -55,4 +55,4 @@
 
 - プロジェクト名: `siire-order-memo`
 - Vault フォルダ: `03_Projects/仕入発注メモ/`
-- 本番 URL: 未定（GitHub Pages 有効化後に記入）
+- 本番 URL: `https://hiroki-web-lab.github.io/siire-order-memo/`（GitHub Pages 配信元 `main` / root）
