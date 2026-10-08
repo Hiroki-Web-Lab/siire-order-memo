@@ -7,7 +7,7 @@
 
 - **本番**: https://hiroki-web-lab.github.io/siire-order-memo/ （GitHub Pages・main / root。導入ページ `index.html`、本体 `siire-order-memo.js`）
 - **GitHub**: https://github.com/Hiroki-Web-Lab/siire-order-memo（public / main）
-- **実装済み（Phase 1）**: 土物ブロックの読み取り → 全体表示（チェック・段階 最低/中/最高/直接・数量・仕入先、一括段階切替、初期「中」）→ 仕入先別の文面と [コピー]。仕入先マスタ（既定4社・設定画面で編集）と品目ごとの前回仕入先を localStorage（接頭辞 `siireOrderMemo.`）に保存。数量0・未チェック・仕入先未選択は出力しない（未選択は件数警告）
+- **実装済み（Phase 1）**: 土物ブロックの読み取り → 全体表示（チェック・段階 最低/中/最高/直接・数量・仕入先、一括段階切替、初期「中」）→ 仕入先別の文面と [コピー]。仕入先マスタ（既定5社 筑前・丸邦・西部青果・アグリ・大同青果・設定画面で編集）と品目ごとの前回仕入先を localStorage（接頭辞 `siireOrderMemo.`）に保存。数量0・未チェック・仕入先未選択は出力しない（未選択は件数警告）
 - **テスト**: `node test/logic.test.js`（依存なし）。画面確認は `python3 -m http.server` で `test/fixture.html`（合成データ）
 - **復元ポイント `stable`**: なし
 
@@ -33,6 +33,7 @@
 
 ## 履歴（新しい順・1行ずつ）
 
+- 2026-10-08 S2 追記: 既定の仕入先に西部青果を追加（アグリの前）。既に仕入先を保存した端末には反映されない（設定画面で追加する）
 - 2026-10-08 S2: Phase 0（DOM・CSP 確認、CSP なし）と Phase 1 実装（orchestrate: codex 実装・Sonnet 検証 PASS）。GitHub Pages を main / root で有効化
 - 2026-10-08 S1 追記2: 仕入先名は公開リポジトリに含めてよいと本人が確認。4社をコードの既定値にする方針へ変更
 - 2026-10-08 S1 追記: 数量の選び方（最低／中／最高・直接入力・0 は出力しない）と仕入先4社を確定

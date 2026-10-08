@@ -5,6 +5,7 @@
   var DEFAULTS = [
     { id: 'chikuzen', name: '筑前', greeting: 'おはよう', closing: 'お願いします' },
     { id: 'marukuni', name: '丸邦', greeting: 'おはよう', closing: 'お願いします' },
+    { id: 'seibu', name: '西部青果', greeting: 'おはよう', closing: 'お願いします' },
     { id: 'agri', name: 'アグリ', greeting: 'おはよう', closing: 'お願いします' },
     { id: 'daido', name: '大同青果', greeting: 'おはよう', closing: 'お願いします' }
   ];
